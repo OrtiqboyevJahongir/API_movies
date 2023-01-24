@@ -1,0 +1,113 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ .wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    /* gap: 100px; */
+ }
+ .loader {
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   display: block;
+   margin:15px auto;
+   position: relative;
+   color: #FFF;
+   left: -100px;
+   box-sizing: border-box;
+   animation: shadowRolling 2s linear infinite;
+   margin: 50% auto;
+ }
+ 
+ @keyframes shadowRolling {
+   0% {
+     box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+   }
+   12% {
+     box-shadow: 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+   }
+   25% {
+     box-shadow: 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+   }
+   36% {
+     box-shadow: 120px 0 white, 110px 0 white, 100px 0 white, 0px 0 rgba(255, 255, 255, 0);
+   }
+   50% {
+     box-shadow: 130px 0 white, 120px 0 white, 110px 0 white, 100px 0 white;
+   }
+   62% {
+     box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white, 110px 0 white;
+   }
+   75% {
+     box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white, 120px 0 white;
+   }
+   87% {
+     box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 white;
+   }
+   100% {
+     box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+   }
+ }
+ .modal-window{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.575); 
+    position: fixed;
+    top: 0;
+    z-index: 55;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+ }
+ .modal-contens{
+    width: 1000px;
+    height: 580px;
+    background-color: #FFF;
+ }
+
+ .hide-modal{
+  transform: scale(0);
+ }
+
+ .animationAll{
+      animation-name: animationAll;
+      animation-iteration-count: 1;
+      animation-duration: 0.1s;
+      animation-fill-mode: backwards;
+      animation-direction: alternate;
+      
+ }
+
+ @keyframes animationAll{
+    0%{
+      transform: translateX(0);
+    }
+    25%{
+      transform: translateX(15px);
+    }
+    50%{
+      transform: translateX(-15px);
+    }
+    75%{
+      transform: translateX(15px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+ }
+ .fon1{
+display: none;
+
+  
+ }
+ .fon{
+  display: none;  
+}
+.size{
+  width: 30px;
+}

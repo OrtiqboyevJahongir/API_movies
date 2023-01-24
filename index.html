@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/botsrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body> 
+    <header class="bg-success p-2" >
+        <div class="container">
+            <nav class="nav ">  
+                <h2 class=" text-light nav-logo  ">
+                    movies-app 
+                </h2>
+                <div class="bookMac">
+
+                </div>
+            </nav>
+           
+        </div>
+    </header>
+    <main >
+        <div class="modal-window hide-modal ">
+            <div class="modal-contens position-relative">
+                <button class="btn btn-danger hide position-absolute end-0 m-2">close</button>
+                <div class="modal-wrapper p-4">                      
+                </div>
+            </div>
+        </div>
+        <section class="main p-4"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 p-3 bg-white m-1 shadow">
+                        <form action="#">
+                            <label for="film_name" class="w-100 my-2">
+                                <input id="seorch" type="text" placeholder="enter film name" class="form-control p-3 ">
+                            </label>
+                            <label for="film_name" class="w-100 my-2">
+                                <input id="rating" min="1" max="10" type="number" placeholder="enter film reating" class="form-control p-3 ">
+                            </label>
+                            <select name="" class="form-select p-3 my-2" id="ctegory">
+                                <option value="all" class="" disabled  selected>select film</option>
+                            </select>
+                            <button class="btn btn-success w-100 p-3 my-2" id="result">seorch</button>
+                            <div class="count shadow p-3 bg-white"></div>
+                        </form>
+                    </div>
+                    <div class="col-md-8 p-3 bg-info m-1 shadow">
+                        <div class="notif"></div>
+                        <div  class="wrapper">
+                                                        
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script/db.js"></script>
+    <script src="script/allVar.js"></script> 
+    <script src="script/script.js"></script>
+
+
+  
+</body>
+</html>
